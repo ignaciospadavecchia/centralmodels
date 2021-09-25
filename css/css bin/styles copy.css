@@ -1,0 +1,123 @@
+/*  GLOBALS */
+
+/* CSS Border-Box RESET */
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+
+/* TYPOGRAPHY */
+
+@font-face {
+  font-family: "Chronicle Display Roman";
+  src: url("ChronicleDisp-Roman.eot?#iefix") format("embedded-opentype"), url("ChronicleDisp-Roman.woff") format("woff"), url("ChronicleDisp-Roman.ttf") format("truetype"), url("ChronicleDisp-Roman.svg#ChronicleDisplay-XLight") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  width: auto;
+  height: 100vh;
+}
+
+.wrapper {
+  width: auto;
+  height: 100vh;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/*  MAIN MENU - Figma-2161104*/
+
+.typography__main-menu {
+  font-family: Chronicle Display;
+  font-size: 7vh;
+  font-style: normal;
+  font-weight: 325;
+  line-height: 10vh;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #000000;
+}
+
+/* NAVBAR - Vertical Text - Figma-2161110, 2161111 */
+
+.sideways-text {
+  height:80%;
+  /* sideways */
+  text-orientation: sideways-right;
+  writing-mode: sideways-lr;
+  -webkit-writing-mode: sideways-lr;
+  -ms-writing-mode: vertical-lr;
+  /* font  */
+  font-family: Chronicle Display;
+  font-style: normal;
+  font-weight: 275;
+  font-size: 2.5vh;
+  line-height: 1.3vh; /* 24px */
+  /* identical to box height */
+  color: #000000;
+  gap: 3vh;
+  padding: 1.5vw;
+}
+
+.nav-body {
+  height: 80%;
+}
+
+/* MAIN - Figma-2161110, 2161111  */
+.main-body {
+  height: 80%;
+  width: 80%;
+}
+
+img.central-logo__contact {
+  height: 3vh;
+}
+
+.main-body__main-content {
+  font-family: Chronicle Display;
+  font-style: normal;
+  text-align: center;
+  font-size: 4vh;
+  font-style: normal;
+  font-weight: 275;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.main-body__content {
+  font-size: 3vh;
+}
+
+.ico-facebook, .ico-instagram {
+  height: 4vh;
+}
+

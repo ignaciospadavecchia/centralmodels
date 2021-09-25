@@ -1,0 +1,200 @@
+/*  GLOBALS */
+
+/* CSS Border-Box RESET */
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "Chronicle Display Roman";
+  src: url("ChronicleDisp-Roman.eot?#iefix") format("embedded-opentype"), url("ChronicleDisp-Roman.woff") format("woff"), url("ChronicleDisp-Roman.ttf") format("truetype"), url("ChronicleDisp-Roman.svg#ChronicleDisplay-XLight") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  font-family: 'Chronicle Display', sans-serif; 
+  width: auto;
+  height: 100vh;
+}
+
+.wrapper {
+  width: auto;
+  height: 100vh;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/*  MAIN MENU - Figma-2161104 */
+
+.typography__main-menu {
+  font-size: 7vh;
+  font-weight: 325;
+  line-height: 10vh;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #000000;
+}
+
+/* NAVBAR - Vertical Text - Figma-2161110, 2161111 */
+
+.sideways-text {
+  height:80%;
+  /* sideways */
+  text-orientation: sideways-right;
+  writing-mode: sideways-lr;
+  -webkit-writing-mode: sideways-lr;
+  -ms-writing-mode: vertical-lr;
+  /* font  */
+  font-weight: 275;
+  font-size: 2.5vh;
+  line-height: 1.3vh; /* 24px */
+  /* identical to box height */
+  color: #000000;
+  gap: 3vh;
+  padding: 1.5vw;
+}
+
+.nav-body {
+  height: 80%;
+}
+
+/* MAIN - Figma-2161110, 2161111  */
+
+.main-body {
+  height: 80%;
+  width: 80%;
+}
+
+img.central-logo__contact {
+  height: 3vh;
+}
+
+.main-body__main-content {
+  text-align: center;
+  font-size: 4vh;
+  font-weight: 275;
+  letter-spacing: 0em;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.main-body__content {
+  font-size: 3vh;
+}
+
+.ico-facebook, .ico-instagram {
+  height: 4vh;
+}
+
+/* MAIN - Figma-2161111  */
+
+.flex-container {
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: none;
+}
+
+.flex-container > div {
+  background-color: #c4c4c4;
+  width: 15vw;
+  height: 30vh;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+/* MAIN - Figma-216103  */
+  
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(25vh, 1fr));
+  grid-auto-rows: repeat(auto-fit, minmax(auto-fit, 1fr));
+  grid-gap: 1vh 0vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  
+}
+
+.grid-container > div {
+  text-align: center;
+  font-size: 3vh;
+}
+
+.card-text-vbig {
+  height: 33.3vh;
+}
+
+.card-title {
+  font-size: 2.5vh;
+  text-align: left;
+}
+
+.card-body {
+  font-size:1.5vh;
+  text-align: left;
+}
+
+.img-vbig {
+ /*  width: 100%; */
+  height: 33.3vh;
+  height: fit-content;
+}
+
+.img {
+  width: 100%;
+  min-height: fit-content;
+  /* height: 33.3vh; */
+  /* height: 24vh; */
+  /* width: 90%;
+  clip-path: rect(10vh,300px,200px,0px); */
+}
+
+@media only screen and (max-width: 1300px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(20vh, 1fr));
+    grid-template-rows: 35vh 35vh 35vh;
+    grid-auto-rows: repeat(3, minmax(20vh, 1fr));
+    grid-auto-flow: dense;
+    background-color: white;
+    padding: 1vw;
+    grid-gap: 2vh 0vw;
+  }
+
+  .card-body {
+    font-size:1.5vh;
+    text-align: left;
+    width: 100%;
+  }
+  
+}

@@ -1,0 +1,107 @@
+@import url(./reset.css);
+
+@font-face {
+  font-family: "Chronicle Display";
+  src: url("../public/fonts/ChronicleDisp-Roman.woff") format("woff"),
+    url(../public/fonts/ChronicleDisplay-XLight.woff) format("woff");
+}
+
+body {
+  font-family: "Chronicle Display", sans-serif;
+  color: #333;
+  width: auto;
+  height: 100vh;
+}
+
+a,
+a:hover {
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------------------------------------------------------- */
+
+.main-menu {
+  font-size: 7vh;
+  font-weight: 325;
+  line-height: 10vh;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.sub-menu {
+  font-size: 3.5vh;
+  font-weight: 325;
+  line-height: 5vh;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+/* -------------------------------------------------------------------- */
+
+li.hidden {
+  display: hidden;
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+}
+
+#slideUp:target {
+  display: block;
+  position: relative;
+  z-index: 999;
+  animation: 1s slideUp linear forwards 1;
+}
+
+.fadeIn:hover {
+   animation: fadeIn 3s;
+  /* animation-play-state: paused; */
+}
+
+.text-slider:hover { 
+  /* display: block; */
+  animation: fadeIn 2s;
+}
+
+
+@keyframes slideUp {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -50px;
+  }
+ /*  80% {
+    top: -50px;
+  }
+  100% {
+    top: 0px;
+  } */
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+  }
+  to { 
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 1rem;
+  }
+}
+
+
+
+

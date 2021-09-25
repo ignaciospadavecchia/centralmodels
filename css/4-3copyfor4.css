@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Chronicle Display";
+  src: url("../public/fonts/ChronicleDisp-Roman.woff") format("woff"),
+    url(../public/fonts/ChronicleDisplay-XLight.woff) format("woff");
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-size: 1rem;
+  font-family: "ChronicleDisp-Roman", sans-serif;
+  color: #333;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.grid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: minmax(2rem, 4rem) 48.75% 48.75%;
+  grid-template-rows: 10vh 80vh 10vh; /* Non-scrollable - to Scroll create Layer*/
+}
+
+.grid > div {
+  background-color: lightgray;
+}
+
+.grid > div:hover {
+  border: 2px solid black;
+}
+
+/* NAV */
+/* ----*/
+
+.box4 > .nav-grid {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+grid-template-columns: repeat(8, 1fr);
+  background-color: lightcoral;
+  text-orientation: sideways-right;
+  writing-mode: sideways-lr;
+  -webkit-writing-mode: sideways-lr;
+  -ms-writing-mode: vertical-lr;
+}
+
+.grid > .nav-grid:hover {
+  border: 2px solid black;
+}
+
+.nav-grid > .nav-grid-item-1 {
+  grid-column: -7 / -8;
+}
+
+.nav-grid > .nav-grid-item-2 {
+  grid-column: -6 / -7;
+}
+
+.nav-grid > .nav-grid-item-3 {
+  grid-column: -5 / -6;
+}
+
+.nav-grid > .nav-grid-item-4 {
+  grid-column: -4 / -5;
+}
+
+.nav-grid > .nav-grid-item-5 {
+  grid-column: -3 / -4;
+}
+
+.nav-grid > .nav-grid-item-6 {
+  grid-column: -2 / -3;
+}
+
+
+/* MAIN  */
+/* ---- */
+
+.grid .main-fullscreen {
+  display: grid;
+  grid-column: 2 / 4;
+  grid-row: 1 / 4;
+  grid-template-columns: repeat(auto-fill, minmax(100px,1fr);
+  grid-template-rows: 100px;
+}
+
+/* LEFT PANE */
+
+/* --------- */
+
+.grid > .leftmain-full {
+  display: grid;
+  grid-column: 2 / 3;
+  grid-row: 1 / 4;
+  width: 100%;
+  background-color: lightgoldenrodyellow;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.grid > .leftmain-nested-grid {
+  display: grid;
+  width: 100%;
+  grid-template-rows: 1fr 8fr 1fr;
+  background-color: lightyellow;
+}
+
+.grid > .leftmain-nested-grid > .leftmain-nested-grid-1 {
+  width: 90%;
+  justify-self: end;
+  background-color: lightgreen;
+}
+
+/* RIGHT PANE */
+
+/* ---------- */
+
+.grid > .rightmain-full {
+  grid-column: 3 / 4;
+  grid-row: 1 / 4;
+}
+
+.grid > .rightmain-nested-grid {
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+  background-color: lightsalmon;
+}
+
+.rightmain-nested-grid > .rightmain-nested-grid-1 {
+  width: 90%;
+  background-color: lightslategray;
+}
+
+/* LOGOS */
+
+/* ----- */
+
+/* Logo floating center */
+
+.grid > .central-logo-1 {
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 70vh;
+  margin-left: 2.5vw;
+  background-color: lime;
+  z-index: 3;
+}
+
+/* Hidden Grid boxes */
+
+.grid > .none {
+  display: none;
+}
