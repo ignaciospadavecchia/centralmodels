@@ -52,13 +52,14 @@ a:hover {
 /* ----*/
 
 .box4 > .nav-grid {
+  background-color: lightcoral;
   display: grid;
   height: 100%;
   width: 100%;
+  grid-area: nav;
+  grid-template-columns: repeat(8, 1fr);
   align-items: center;
   text-align: center;
-grid-template-columns: repeat(8, 1fr);
-  background-color: lightcoral;
   text-orientation: sideways-right;
   writing-mode: sideways-lr;
   -webkit-writing-mode: sideways-lr;
@@ -66,7 +67,11 @@ grid-template-columns: repeat(8, 1fr);
 }
 
 .grid > .nav-grid:hover {
-  border: 2px solid black;
+  border: 1px solid black;
+}
+
+.nav-grid > li:hover {
+  border: 1px solid black;
 }
 
 .nav-grid > .nav-grid-item-1 {
@@ -97,79 +102,6 @@ grid-template-columns: repeat(8, 1fr);
 /* MAIN  */
 /* ---- */
 
-.grid .main-fullscreen {
-  display: grid;
-  grid-column: 2 / 4;
-  grid-row: 1 / 4;
-  grid-template-columns: repeat(auto-fill, minmax(100px,1fr);
-  grid-template-rows: 100px;
-}
-
-/* LEFT PANE */
-
-/* --------- */
-
-.grid > .leftmain-full {
-  display: grid;
-  grid-column: 2 / 3;
-  grid-row: 1 / 4;
-  width: 100%;
-  background-color: lightgoldenrodyellow;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
-
-.grid > .leftmain-nested-grid {
-  display: grid;
-  width: 100%;
-  grid-template-rows: 1fr 8fr 1fr;
-  background-color: lightyellow;
-}
-
-.grid > .leftmain-nested-grid > .leftmain-nested-grid-1 {
-  width: 90%;
-  justify-self: end;
-  background-color: lightgreen;
-}
-
-/* RIGHT PANE */
-
-/* ---------- */
-
-.grid > .rightmain-full {
-  grid-column: 3 / 4;
-  grid-row: 1 / 4;
-}
-
-.grid > .rightmain-nested-grid {
-  display: grid;
-  grid-template-rows: 1fr 8fr 1fr;
-  background-color: lightsalmon;
-}
-
-.rightmain-nested-grid > .rightmain-nested-grid-1 {
-  width: 90%;
-  background-color: lightslategray;
-}
-
-/* LOGOS */
-
-/* ----- */
-
-/* Logo floating center */
-
-.grid > .central-logo-1 {
-  position: absolute;
-  align-self: center;
-  justify-self: center;
-  margin-bottom: 70vh;
-  margin-left: 2.5vw;
-  background-color: lime;
-  z-index: 3;
-}
-
-/* Hidden Grid boxes */
-
-.grid > .none {
-  display: none;
+main {
+  grid-row: span 3;
 }
