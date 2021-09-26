@@ -43,8 +43,8 @@ a:hover {
   display: grid;
   height: 100vh;
   width: 100vw;
-  grid-template-columns: minmax(2rem, 4rem) 97.5% auto;
-  grid-template-rows: 10vh 80vh 10vh;
+  grid-template-columns: minmax(2rem, 3rem) auto;
+  grid-template-rows: auto 1fr auto;
 }
 
 /* NAV */

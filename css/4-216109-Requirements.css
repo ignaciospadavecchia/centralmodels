@@ -62,7 +62,7 @@ a:hover {
   width: 100%;
   align-items: center;
   text-align: center;
-grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   background-color: lightcoral;
   text-orientation: sideways-right;
   writing-mode: sideways-lr;
