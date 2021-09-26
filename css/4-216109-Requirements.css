@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 0;
+  padding: 0;
   margin: 0;
 }
 
@@ -18,20 +18,25 @@ body {
   color: #333;
 }
 
-ul, li {
+img,
+ul,
+ol,
+li {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 a {
-  color: black;
+  color: #333;
 }
 
 a:hover {
-  color: black;
-  text-decoration: underline;
+  color: #333;
 }
+
+/* MAIN GRID */
+/* ***************************************************************** */
 
 .grid {
   display: grid;

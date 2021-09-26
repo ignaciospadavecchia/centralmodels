@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 0;
+  padding: 0;
   margin: 0;
 }
 
@@ -10,6 +10,7 @@
     url(../public/fonts/ChronicleDisplay-XLight.woff) format("woff");
 }
 
+html,
 body {
   height: 100vh;
   width: 100vw;
@@ -33,18 +34,21 @@ a {
 
 a:hover {
   color: #333;
-  text-decoration: underline;
 }
+
+/* MAIN GRID */
+/* ***************************************************************** */
 
 .grid {
   display: grid;
   height: 100vh;
-  grid-template-columns: minmax(2rem, 4rem) 98% auto;
+  width: 100vw;
+  grid-template-columns: minmax(2rem, 4rem) 97.5% auto;
   grid-template-rows: 10vh 80vh 10vh;
 }
 
 /* NAV */
-/* ----*/
+/* ***************************************************************** */
 
 .box4 > .nav-grid {
   display: grid;
@@ -60,38 +64,38 @@ a:hover {
   -ms-writing-mode: vertical-lr;
 }
 
-.nav-grid > .nav-grid-item-1 {
-  grid-column: -7 / -8;
-}
+    .nav-grid > .nav-grid-item-1 {
+      grid-column: -7 / -8;
+    }
 
-.nav-grid > .nav-grid-item-2 {
-  grid-column: -6 / -7;
-}
+    .nav-grid > .nav-grid-item-2 {
+      grid-column: -6 / -7;
+    }
 
-.nav-grid > .nav-grid-item-3 {
-  grid-column: -5 / -6;
-}
+    .nav-grid > .nav-grid-item-3 {
+      grid-column: -5 / -6;
+    }
 
-.nav-grid > .nav-grid-item-4 {
-  grid-column: -4 / -5;
-}
+    .nav-grid > .nav-grid-item-4 {
+      grid-column: -4 / -5;
+    }
 
-.nav-grid > .nav-grid-item-5 {
-  grid-column: -3 / -4;
-}
+    .nav-grid > .nav-grid-item-5 {
+      grid-column: -3 / -4;
+    }
 
-.nav-grid > .nav-grid-item-6 {
-  grid-column: -2 / -3;
-}
+    .nav-grid > .nav-grid-item-6 {
+      grid-column: -2 / -3;
+    }
 
-/* MAIN  */
-/* ---- */
+/* MAIN */
+/* ***************************************************************** */
 
 .grid > main {
-  grid-row: span 3;
+  grid-row: span 4;
+  grid-column: 2 / 3;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
 
   grid-template-areas:
     "main-box-1-1 main-box-1-2 main-box-2-1 main-box-2-2 main-box-3-1 main-box-3-2"
@@ -100,6 +104,7 @@ a:hover {
 
   text-align: end;
   align-items: center;
+  padding-top: 4em;
 }
 
 div > .main-box-card {
@@ -109,7 +114,6 @@ div > .main-box-card {
   font-family: "Helvetica", sans-serif;
   font-size: 0.8em;
   line-height: 1.1em;
-  padding-left: 1em;
 }
 
 .main-box-card-title {
@@ -117,13 +121,13 @@ div > .main-box-card {
   font-family: "Chronicle Display", sans-serif;
   line-height: 1.2em;
   text-align: left;
-  padding-bottom: 1em;
+  /* padding-bottom: 1em; */
 }
 
 @media screen and (max-width: 1420px) {
   .grid > main {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 50% 47.5%;
     grid-template-rows: repeat(auto-fit, 1fr);
     row-gap: 5px;
 
@@ -151,21 +155,20 @@ div > .main-box-card {
     font-family: "Helvetica", sans-serif;
     font-size: 1em;
     line-height: 1em;
-    padding-left: 1em;
+    /* padding-left: 1em; */
   }
-  
+
   .main-box-card > .main-box-card-title {
     font-size: 1.8em;
     line-height: 1.2em;
     text-align: left;
     font-family: "Chronicle Display", sans-serif;
   }
-  
 }
 
 /* ***************************************************************** */
-/* END OF @media */
-/* ------------- */
+/* END OF @media medium */
+
 
 @media screen and (max-width: 550px) {
   .grid > main {
@@ -196,28 +199,24 @@ div > .main-box-card {
     flex-direction: column;
     align-items: flex-start;
     font-family: "Helvetica", sans-serif;
-    font-size: 0.8em;
+    font-size: 0.7em;
     line-height: 1em;
-    padding-left: 1em;
   }
-  
+
   .main-box-card > .main-box-card-title {
     font-size: 1.4em;
     line-height: 1.2em;
     text-align: left;
     font-family: "Chronicle Display", sans-serif;
   }
-  
 }
 
 /* ***************************************************************** */
-/* END OF @media */
-/* ------------- */
+/* END OF @media small */
 
 
+/* GRID SKELETON */
 /* ***************************************************************** */
-/* GRID SCAFOLDING */
-/* --------------- */
 
 .main-box-1-1 {
   grid-area: main-box-1-1;
@@ -226,6 +225,7 @@ div > .main-box-card {
 
 .main-box-1-2 {
   grid-area: main-box-1-2;
+  padding-left: 1em;
   /* background-color: blue; */
 }
 
@@ -236,6 +236,7 @@ div > .main-box-card {
 
 .main-box-2-2 {
   grid-area: main-box-2-2;
+  padding-left: 1em;
   /* background-color: yellow; */
 }
 
@@ -246,6 +247,7 @@ div > .main-box-card {
 
 .main-box-3-2 {
   grid-area: main-box-3-2;
+  padding-left: 1em;
   /* background-color: aquamarine; */
 }
 
@@ -261,6 +263,7 @@ div > .main-box-card {
 
 .main-box-5-1 {
   grid-area: main-box-5-1;
+  padding-left: 1em;
   /*  background-color: beige; */
 }
 
@@ -271,11 +274,13 @@ div > .main-box-card {
 
 .main-box-6-1 {
   grid-area: main-box-6-1;
+  padding-left: 1em;
   /* background-color: green; */
 }
 
 .main-box-6-2 {
   grid-area: main-box-6-2;
+  padding-left: 1em;
   /* background-color: green; */
 }
 
@@ -286,6 +291,7 @@ div > .main-box-card {
 
 .main-box-7-2 {
   grid-area: main-box-7-2;
+  padding-left: 1em;
   /* background-color: blueviolet; */
 }
 
@@ -296,6 +302,7 @@ div > .main-box-card {
 
 .main-box-8-2 {
   grid-area: main-box-8-2;
+  padding-left: 1em;
   /* background-color: blueviolet; */
 }
 
