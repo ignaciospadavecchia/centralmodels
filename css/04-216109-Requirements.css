@@ -42,14 +42,14 @@ body > .grid {
   display: grid;
   height: 100vh;
   width: 100vw;
-  grid-template-columns: 4rem auto auto; /* Two Views */ 
+  grid-template-columns: 4rem auto auto; /* Two Views */
   /* grid-template-columns: minmax(2rem, 3rem) auto; */ /* Fullscreen */
   /* grid-template-rows: auto 2fr auto; */
 }
 
-.grid > div:hover {
+/* .grid > div:hover {
   border: 2px solid black;
-}
+} */
 
 /* NAV */
 /* ***************************************************************** */
@@ -104,11 +104,10 @@ body > .grid {
   /* grid-column: 2 / -1;
   grid-row: 1 / -1; */
   /* grid-template-columns: repeat(auto-fill, minmax(100px,1fr); */
-  /* grid-template-rows: auto 1fr auto; */
+  grid-template-rows: auto 1fr 1fr auto;
   justify-content: center;
   align-items: center;
 }
-
 
 /* Central Boxes */
 /* ***************************************************************** */
@@ -120,9 +119,9 @@ main.box-5 {
 }
 
 .box-5 > .box-5-1 {
-  background: #C4C4C4;
-  width: 28%;
-  height: 30%;
+  background: #c4c4c4;
+  width: 30%;
+  height: 35%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,53 +129,101 @@ main.box-5 {
   text-align: center;
 }
 
-.box-5-1-text {
+.box-5-1 > .box-5-1-text {
   width: 100%;
-  height: 4em;
+  height: 3em;
+  font-size: 1.2em;
+  display: flex;
   background-color: white;
-  justify-self: cente;
+  justify-content: center;
+  align-items: center;
 }
-  
+
 .box-5 > .box-5-2 {
-  background: #C4C4C4;
-  width: 28%;
-  height: 30%;
+  background: #c4c4c4;
+  width: 30%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  text-align: center;
   margin-right: 1em;
 }
 
+.box-5-2 > .box-5-2-text {
+  width: 100%;
+  height: 3em;
+  font-size: 1.2em;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
 
 main.box-6 {
   display: flex;
   gap: 2em;
   justify-content: start;
+  width: 90%; /* Nav right mirror */
 }
 
 .box-6 > .box-6-1 {
-  background: #C4C4C4;
-  width: 28%;
-  height: 30%;
+  background: #c4c4c4;
+  width: 30%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  text-align: center;
   margin-left: 1em;
 }
 
-.box-6 > .box-6-2 {
-  background: #C4C4C4;
-  width: 28%;
-  height: 30%;
+.box-6-1 > .box-6-1-text {
+  width: 100%;
+  height: 3em;
+  font-size: 1.2em;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
 }
 
+.box-6 > .box-6-2 {
+  background: #c4c4c4;
+  width: 30%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  text-align: center;
+  margin-left: 1em;
+}
 
+.box-6-2 > .box-6-2-text {
+  width: 100%;
+  height: 3em;
+  font-size: 1.2em;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
 
 /* LOGOS */
 /* ***************************************************************** */
 
 /* Logo floating center */
 
-a.img , .central-logo-1  {
+a.img,
+.central-logo-1 {
   position: absolute;
   align-self: center;
   justify-self: center;
   margin-bottom: 67vh;
-  margin-left: 8.5vw;
+  margin-left: 5.8vw;
   z-index: 3;
   width: 25%;
 }
@@ -187,8 +234,20 @@ a.img , .central-logo-1  {
   align-self: center;
   justify-self: center;
   margin-bottom: 48vh;
-  margin-left: 2.5vw;
+  margin-left: 0vw;
   z-index: 3;
+}
+
+.footer-left-1 {
+  position: absolute;
+  margin-top: 70vh;
+  margin-left: 19.8vw;
+}
+
+.footer-right-1 {
+  position: absolute;
+  margin-top: 70vh;
+  margin-left: 50.7vw;
 }
 
 /* Hidden Grid boxes */
