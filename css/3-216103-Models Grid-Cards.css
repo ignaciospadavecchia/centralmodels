@@ -18,7 +18,10 @@ body {
   color: #333;
 }
 
-ul, li {
+img,
+ul,
+ol,
+li {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -98,7 +101,6 @@ a:hover {
   grid-column: -2 / -3;
 }
 
-
 /* MAIN  */
 /* ---- */
 
@@ -106,40 +108,107 @@ a:hover {
   grid-row: span 3;
   background-color: #333;
   display: grid;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
-  grid-auto-rows: 100px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-flow: dense;
+
+  grid-template-areas:
+    "main-box-1-1 main-box-1-2 main-box-2-1 main-box-2-2 main-box-3-1 main-box-3-2"
+    "   .         main-box-4-1 main-box-4-2 main-box-5-1 main-box-5-2      .    "
+    "main-box-6-1 main-box-6-2 main-box-7-1 main-box-7-2      .            .    ";
+
+  text-align: center;
 }
 
-main > .main-box-1 {
-  /* grid-area: main-box-1; */
-  background-color: blue;
+@media screen and (max-width: 900px) {
+  .grid > main {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    grid-auto-rows: 1fr;
+  }
 }
-main > .main-box-2 {
-  /* grid-area: main-box-2; */
-  background-color:antiquewhite;
+
+.main-box-1-1 {
+  grid-area: main-box-1-1;
+  /*  background-color: blue; */
 }
-main > .main-box-3 {
-  /* grid-area: main-box-3; */
+
+.main-box-1-2 {
+  grid-area: main-box-1-2;
+  /* background-color: blue; */
+}
+
+.main-box-2 > .main-box-2-1 {
+  grid-area: main-box-2-1;
+  background-color: yellow;
+}
+
+.main-box-2 > .main-box-2-2 {
+  grid-area: main-box-2-2;
+  background-color: yellow;
+}
+
+.main-box-3 > .main-box-3-1 {
+  grid-area: main-box-3-1;
   background-color: aquamarine;
 }
-main > .main-box-4 {
-  /* grid-area: main-box-4; */
-  background-color:azure;
-}
-main > .main-box-5 {
-  /* grid-area: main-box-5; */
-  background-color:beige;
-}
-main > .main-box-6 {
-  /* grid-area: main-box-6; */
-  background-color:bisque;
-}
-main > .main-box-7 {
-  /* grid-area: main-box-7; */
-  background-color:blanchedalmond;
+
+.main-box-3 > .main-box-3-2 {
+  grid-area: main-box-3-2;
+  background-color: aquamarine;
 }
 
-main > .main-box-void {
- /*  grid-area: main-box-void; */
-  background-color:red;
+.main-box-4 > .main-box-4-1 {
+  grid-area: main-box-4-1;
+  background-color: azure;
+}
+
+.main-box-4 > .main-box-4-2 {
+  grid-area: main-box-4-2;
+  background-color: azure;
+}
+
+.main-box-5 > .main-box-5-1 {
+  grid-area: main-box-5-1;
+  background-color: beige;
+}
+
+.main-box-5 > .main-box-5-2 {
+  grid-area: main-box-5-2;
+  background-color: beige;
+}
+
+.main-box-6 > .main-box-6-1 {
+  grid-area: main-box-6-1;
+  background-color: green;
+}
+
+.main-box-6 > .main-box-6-2 {
+  grid-area: main-box-6-2;
+  background-color: green;
+}
+
+.main-box-7 > .main-box-7-1 {
+  grid-area: main-box-7-1;
+  background-color: blanchedalmond;
+  width: 100%;
+  height: 100%;
+}
+
+.main-box-7 > .main-box-7-2 {
+  grid-area: main-box-7-2;
+  background-color: blueviolet;
+  width: 100%;
+  height: 100%;
+}
+
+main > .main-box-void-1 {
+  /* grid-area: main-box-void-1; */
+  background-color: red;
+  width: 50%;
+}
+
+main > .main-box-void-2 {
+  /* grid-area: main-box-void-2; */
+  background-color: red;
+  width: 50%;
 }
