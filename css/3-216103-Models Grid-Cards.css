@@ -143,26 +143,9 @@ div > .main-box-card {
   }
 
   .grid img {
-    width: 100%;
+    width: auto;
     justify-self: left;
     text-align: start;
-  }
-
-  div > .main-box-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-family: "Helvetica", sans-serif;
-    font-size: 1em;
-    line-height: 1em;
-    /* padding-left: 1em; */
-  }
-
-  .main-box-card > .main-box-card-title {
-    font-size: 1.8em;
-    line-height: 1.2em;
-    text-align: left;
-    font-family: "Chronicle Display", sans-serif;
   }
 }
 
