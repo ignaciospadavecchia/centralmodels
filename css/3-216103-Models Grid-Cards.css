@@ -28,11 +28,11 @@ li {
 }
 
 a {
-  color: black;
+  color: #333;
 }
 
 a:hover {
-  color: black;
+  color: #333;
   text-decoration: underline;
 }
 
@@ -43,23 +43,14 @@ a:hover {
   grid-template-rows: 10vh 80vh 10vh;
 }
 
-.grid > div {
-  /* background-color: lightgray; */
-}
-
-.grid > div:hover {
-  /* border: 2px solid black; */
-}
-
 /* NAV */
 /* ----*/
 
 .box4 > .nav-grid {
-  /*  background-color: lightcoral; */
   display: grid;
   height: 100%;
   width: 3rem;
-  grid-area: nav;
+  gap: 1em;
   grid-template-columns: repeat(8, 1fr);
   align-items: center;
   text-align: center;
@@ -67,14 +58,6 @@ a:hover {
   writing-mode: sideways-lr;
   -webkit-writing-mode: sideways-lr;
   -ms-writing-mode: vertical-lr;
-}
-
-.grid > .nav-grid:hover {
-  /*  border: 1px solid black; */
-}
-
-.nav-grid > li:hover {
-  /*  border: 1px solid black; */
 }
 
 .nav-grid > .nav-grid-item-1 {
@@ -106,7 +89,6 @@ a:hover {
 
 .grid > main {
   grid-row: span 3;
-  /* background-color: #333; */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -116,19 +98,33 @@ a:hover {
     "main-box-4-1 main-box-4-2 main-box-5-1 main-box-5-2 main-box-6-1 main-box-6-2"
     "main-box-7-1 main-box-7-2 main-box-8-1 main-box-8-2 main-box-9-1 main-box-9-2";
 
-  text-align: center;
-  justify-content: center;
+  text-align: end;
   align-items: center;
 }
 
-@media screen and (max-width: 1420px) {
+div > .main-box-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Helvetica", sans-serif;
+  font-size: 0.8em;
+  line-height: 1.1em;
+  padding-left: 1em;
+}
 
+.main-box-card-title {
+  font-size: 1.8em;
+  font-family: "Chronicle Display", sans-serif;
+  line-height: 1.2em;
+  text-align: left;
+  padding-bottom: 1em;
+}
+
+@media screen and (max-width: 1420px) {
   .grid > main {
-    /* background-color: #333; */
     display: grid;
-    width: 100%;
-    grid-template-columns: 50% auto;
-    grid-auto-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(auto-fit, 1fr);
     row-gap: 5px;
 
     grid-template-areas:
@@ -139,60 +135,89 @@ a:hover {
       "main-box-5-2 main-box-6-1"
       "main-box-7-1 main-box-7-2"
       "main-box-8-1 main-box-8-2"
-      "main-box-9-1 main-box-9-2"
-      ;
-
-      .main-box-card {
-        display: flex;
-        flex-direction: column;
-        
-        font-size: 1em;
-        justify-content: space-evenly;
-        align-items: flex-start;
-      }
-    
-      .main-box-card > .main-box-card-title {
-        font-size: 1.5em;
-        text-align: left;
-      }
-    
+      "main-box-9-1 main-box-9-2";
   }
 
-  .main-box-card {
-    display: flex;
-    flex-direction: column;
-    
-    font-size: 1em;
-    justify-content: space-evenly;
-    align-items: flex-start;
-  }
-
-  .main-box-card > .main-box-card-title {
-    font-size: 1.5em;
-    text-align: left;
-  }
-
-  .grid img{
-    width: 78%;
+  .grid img {
+    width: 100%;
     justify-self: left;
     text-align: start;
-  } 
+  }
+
+  div > .main-box-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: "Helvetica", sans-serif;
+    font-size: 1em;
+    line-height: 1em;
+    padding-left: 1em;
+  }
+  
+  .main-box-card > .main-box-card-title {
+    font-size: 1.8em;
+    line-height: 1.2em;
+    text-align: left;
+    font-family: "Chronicle Display", sans-serif;
+  }
+  
 }
 
-/* end of @media */
+/* ***************************************************************** */
+/* END OF @media */
+/* ------------- */
 
-.main-box-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-size: 0.7em;
-  padding-left: 1em;
+@media screen and (max-width: 550px) {
+  .grid > main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    row-gap: 5px;
+
+    grid-template-areas:
+      "main-box-1-1 main-box-1-2"
+      "main-box-2-1 main-box-2-2"
+      "main-box-3-1 main-box-3-2"
+      "main-box-4-2 main-box-5-1"
+      "main-box-5-2 main-box-6-1"
+      "main-box-7-1 main-box-7-2"
+      "main-box-8-1 main-box-8-2"
+      "main-box-9-1 main-box-9-2";
+  }
+
+  .grid img {
+    width: 100%;
+    justify-self: left;
+    text-align: start;
+  }
+
+  div > .main-box-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: "Helvetica", sans-serif;
+    font-size: 0.8em;
+    line-height: 1em;
+    padding-left: 1em;
+  }
+  
+  .main-box-card > .main-box-card-title {
+    font-size: 1.4em;
+    line-height: 1.2em;
+    text-align: left;
+    font-family: "Chronicle Display", sans-serif;
+  }
+  
 }
 
-.main-box-card-title {
-  font-size: 1.5em;
-  text-align: left;
-}
+/* ***************************************************************** */
+/* END OF @media */
+/* ------------- */
+
+
+/* ***************************************************************** */
+/* GRID SCAFOLDING */
+/* --------------- */
 
 .main-box-1-1 {
   grid-area: main-box-1-1;
