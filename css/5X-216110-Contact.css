@@ -1,28 +1,16 @@
 /*  GLOBALS */
 
-/* CSS Border-Box RESET */
-
-html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
-}
+@import url(./reset.css);
 
 @font-face {
-  font-family: "Chronicle Display Roman";
-  src: url("ChronicleDisp-Roman.eot?#iefix") format("embedded-opentype"), url("ChronicleDisp-Roman.woff") format("woff"), url("ChronicleDisp-Roman.ttf") format("truetype"), url("ChronicleDisp-Roman.svg#ChronicleDisplay-XLight") format("svg");
-  font-style: normal;
-  font-weight: normal;
+  font-family: "Chronicle Display";
+  src: url("../public/fonts/ChronicleDisp-Roman.woff") format("woff"),
+       url(../public/fonts/ChronicleDisplay-XLight.woff) format("woff");
 }
 
 body {
-  font-family: 'Chronicle Display', sans-serif; 
+  font-family: 'ChronicleDisp-Roman', sans-serif;
+  color: #333;
   width: auto;
   height: 100vh;
 }
@@ -31,7 +19,7 @@ body {
   width: auto;
   height: 100vh;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -50,9 +38,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/*  MAIN MENU - Figma-2161104 */
+/*  MAIN MENU - 2-Figma-216104-Main-Menu */
 
-.typography__main-menu {
+.main-menu {
   font-size: 7vh;
   font-weight: 325;
   line-height: 10vh;
@@ -64,7 +52,7 @@ a:hover {
 /* NAVBAR - Vertical Text - Figma-2161110, 2161111 */
 
 .sideways-text {
-  height:80%;
+  height: 80%;
   /* sideways */
   text-orientation: sideways-right;
   writing-mode: sideways-lr;
@@ -73,15 +61,34 @@ a:hover {
   /* font  */
   font-weight: 275;
   font-size: 2.5vh;
-  line-height: 1.3vh; /* 24px */
+  line-height: 1.3vh;
+  /* 24px */
   /* identical to box height */
   color: #000000;
   gap: 3vh;
   padding: 1.5vw;
+  min-width: 6vw;
+}
+
+.vertical-text {
+  font-family: 'Chronicle Display XLight', sans-serif;
+  color: #333;
+  width: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  text-align: center;
+  z-index: 999;
+  pointer-events: none;
+  -webkit-transform: rotate(-90deg);
+  transform: translate3d( 0, 0, 0) rotate(-90deg);
+  z-index: 100;
 }
 
 .nav-body {
   height: 80%;
+  width: auto;
 }
 
 /* MAIN - Figma-2161110, 2161111  */
@@ -92,7 +99,7 @@ a:hover {
 }
 
 img.central-logo__contact {
-  height: 3vh;
+  height: 2vh;
 }
 
 .main-body__main-content {
@@ -105,7 +112,7 @@ img.central-logo__contact {
 }
 
 .main-body__content {
-  font-size: 3vh;
+  font-size: 2vh;
 }
 
 .ico-facebook, .ico-instagram {
@@ -115,7 +122,7 @@ img.central-logo__contact {
 /* MAIN - Figma-2161111  */
 
 .flex-container {
-  width:100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,10 +130,10 @@ img.central-logo__contact {
   background-color: none;
 }
 
-.flex-container > div {
+.gray {
   background-color: #c4c4c4;
   width: 15vw;
-  height: 30vh;
+  height: 40vh;
   margin: 10px;
   text-align: center;
   line-height: 75px;
@@ -134,28 +141,22 @@ img.central-logo__contact {
 }
 
 /* MAIN - Figma-216103  */
-  
+
 .grid-container {
   display: grid;
-  grid-template-areas: 
-  'img txt img txt img txt'
-  '.   img txt .   img txt'
-  'img txt img txt img txt';
-  /* grid-template-columns: repeat(6, minmax(25vh, 1fr)); */
-  /* grid-auto-rows: repeat(auto-fit, minmax(auto-fit, 1fr)); */
+  grid-template-columns: repeat(6, minmax(25vh, 1fr));
+  grid-auto-rows: repeat(auto-fit, minmax(auto-fit, 1fr));
   grid-gap: 1vh 0vw;
   padding-top: 1vw;
   padding-bottom: 1vw;
-  
 }
 
-.grid-container > div {
+.grid-container>div {
   text-align: center;
   font-size: 3vh;
 }
 
 .card-text-vbig {
-  grid-area: txt;
   height: 33.3vh;
 }
 
@@ -165,22 +166,19 @@ img.central-logo__contact {
 }
 
 .card-body {
-  font-size:1.5vh;
+  font-size: 1.5vh;
   text-align: left;
 }
 
 .img-vbig {
-  grid-area: img;
- /*  width: 100%; */
+  /*  width: 100%; */
   height: 33.3vh;
-  height: fit-content;
 }
 
 .img {
-  grid-area: img;
-  /* width: 100%; */
-  min-height: fit-content;
-  height: 33.3vh;
+  width: 70%;
+  max-height: fit-content;
+  /* height: 33.3vh; */
   /* height: 24vh; */
   /* width: 90%;
   clip-path: rect(10vh,300px,200px,0px); */
@@ -189,23 +187,20 @@ img.central-logo__contact {
 @media only screen and (max-width: 1300px) {
   .grid-container {
     display: grid;
-    grid-template-areas: 
-    'img txt . . .'
-    'img txt . . .'
-    'img txt . . .';
-    /* grid-template-columns: repeat(6, minmax(20vh, 1fr)); */
-    /* grid-template-rows: 35vh 35vh 35vh; */
-    /* grid-auto-rows: repeat(3, minmax(20vh, 1fr)); */
+    grid-template-columns: repeat(2, minmax(20vh, 1fr));
+    grid-template-rows: 33vh 33vh 33vh;
+    grid-auto-rows: repeat(3, minmax(20vh, 1fr));
     grid-auto-flow: dense;
     background-color: white;
-    padding: 1vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
     grid-gap: 2vh 0vw;
+    text-align: center;
   }
-
   .card-body {
-    font-size:1.5vh;
+    font-size: 1.5vh;
     text-align: left;
     width: 100%;
   }
-  
+
 }

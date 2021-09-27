@@ -1,0 +1,166 @@
+@import url(./reset.css);
+@font-face {
+    font-family: "Chronicle Display";
+    src: url("../public/fonts/ChronicleDisp-Roman.woff") format("woff"), url(../public/fonts/ChronicleDisplay-XLight.woff) format("woff");
+}
+
+body {
+    font-family: "Chronicle Display", sans-serif;
+    color: #333;
+    width: auto;
+    height: 100vh;
+}
+
+a, a:hover {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------------------------------------------------------- */
+
+/* VERTICAL MENU */
+
+.sideways-text {
+    height: 80%;
+    /* sideways */
+    text-orientation: sideways-right;
+    writing-mode: sideways-lr;
+    -webkit-writing-mode: sideways-lr;
+    -ms-writing-mode: vertical-lr;
+    /* font  */
+    font-weight: 275;
+    font-size: 2.5vh;
+    line-height: 1.3vh;
+    /* 24px */
+    /* identical to box height */
+    color: #000000;
+    gap: 3vh;
+    padding: 1.5vw;
+    min-width: 6vw;
+}
+
+.vertical-text {
+    font-family: 'Chronicle Display XLight', sans-serif;
+    color: #333;
+    width: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    text-align: center;
+    z-index: 999;
+    pointer-events: none;
+    -webkit-transform: rotate(-90deg);
+    transform: translate3d( 0, 0, 0) rotate(-90deg);
+    z-index: 100;
+}
+
+/* -------------------------------------------------------------------- */
+
+/* MAIN BODY & GALLERY */
+
+.main-body-right {
+    height: 80%;
+    width: 45.5%;
+    position: absolute;
+    top: 11vh;
+    z-index: 1;
+    /* background-color: chartreuse; */
+}
+
+.main-body-left {
+    height: 80%;
+    width: 45.5%;
+    position: absolute;
+    top: 11vh;
+    z-index: 1;
+    /* background-color: blueviolet; */
+}
+
+.img-left {
+    display: block;
+    height: 100%;
+    width: 50%;
+    /* position: absolute; */
+    /*  z-index: 1; */
+    margin: 0;
+    position: absolute;
+}
+
+.img-right {
+    display: block;
+    height: 100%;
+    width: 50%;
+    /* position: absolute; */
+    /*  z-index: 1; */
+    margin: 0;
+    position: absolute;
+}
+
+/* 
+.main-body__main-content {
+    width: 75%;
+    justify-content: space-between;
+    background-color: white;
+    text-align: center;
+    font-size: 4vh;
+    font-weight: 275;
+    letter-spacing: 0em;
+    color: #000000;
+    white-space: nowrap;
+}
+
+.main-body__content {
+    font-size: 2vh;
+}
+
+.main-content__card-title {
+    font-family: inherit;
+    font-size: 4vh;
+}
+
+.main-content__card-sub-title {
+    font-family: inherit;
+    font-size: 2vh;
+    justify-content: space-between;
+} */
+
+@media only screen and (min-width: 1200px) {
+    .main-body__main-content {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .img-left {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        align-self: center;
+    }
+    .img-right {
+        display: none;
+    }
+    .main-body-left {}
+    .main-body__main-content {
+        display: flex;
+        height: 35vh;
+        position: relative;
+        align-self: center;
+        justify-content: space-between;
+        width: 50vw;
+        font-size: 10px;
+    }
+    .main-content__card-title {
+        font-size: 1.8vh;
+    }
+    .main-content__card-sub-title {
+        font-size: 1.5vh;
+        flex-direction: column;
+    }
+}

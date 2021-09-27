@@ -76,6 +76,7 @@ body > .grid {
 .nav-grid > .nav-grid-item-2 {
   grid-column: -6 / -7;
   text-align: center;
+  margin-bottom: 2em;
 }
 
 .nav-grid > .nav-grid-item-3 {
@@ -89,7 +90,6 @@ body > .grid {
 
 .nav-grid > .nav-grid-item-5 {
   grid-column: -3 / -4;
-    
 }
 
 .nav-grid > .nav-grid-item-6 {

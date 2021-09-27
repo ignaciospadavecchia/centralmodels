@@ -53,40 +53,45 @@ a:hover {
 .box4 > .nav-grid {
   display: grid;
   height: 100%;
-  width: 3rem;
-  gap: 1em;
+  width: 3.7rem;
+  font-size: 1.2em;
+  /* This will be inverted */
   grid-template-columns: repeat(8, 1fr);
   align-items: center;
-  text-align: center;
+  text-align: end;
   text-orientation: sideways-right;
   writing-mode: sideways-lr;
   -webkit-writing-mode: sideways-lr;
   -ms-writing-mode: vertical-lr;
 }
 
-    .nav-grid > .nav-grid-item-1 {
-      grid-column: -7 / -8;
-    }
+.nav-grid > .nav-grid-item-1 {
+  grid-column: -7 / -8;
+}
 
-    .nav-grid > .nav-grid-item-2 {
-      grid-column: -6 / -7;
-    }
+.nav-grid > .nav-grid-item-2 {
+  grid-column: -6 / -7;
+  text-align: center;
+  margin-bottom: 2em;
+}
 
-    .nav-grid > .nav-grid-item-3 {
-      grid-column: -5 / -6;
-    }
+.nav-grid > .nav-grid-item-3 {
+  grid-column: -5 / -6;
+  
+}
 
-    .nav-grid > .nav-grid-item-4 {
-      grid-column: -4 / -5;
-    }
+.nav-grid > .nav-grid-item-4 {
+  grid-column: -4 / -5;
+  margin-bottom: 2em;
+}
 
-    .nav-grid > .nav-grid-item-5 {
-      grid-column: -3 / -4;
-    }
+.nav-grid > .nav-grid-item-5 {
+  grid-column: -3 / -4;
+}
 
-    .nav-grid > .nav-grid-item-6 {
-      grid-column: -2 / -3;
-    }
+.nav-grid > .nav-grid-item-6 {
+  grid-column: -2 / -3;
+}
 
 /* MAIN */
 /* ***************************************************************** */
